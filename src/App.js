@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 import html2canvas from "html2canvas";
@@ -49,7 +48,7 @@ function App() {
       <div className="meme">
         <span>{linea1}</span>
         <span>{linea2}</span>
-        <img src={"./img/" + imagen + ".jpg"} />
+        <img alt =" imagen meme" src={"./img/" + imagen + ".jpg"} />
       </div>
     </div>
   );
