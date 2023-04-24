@@ -30,6 +30,7 @@ function App() {
         <option value="smart">Smart Guy</option>
         <option value="tachirita">Tachirita</option>
         <option value="xavi">Xavi</option>
+        <option value="tulo">Tulo</option>
       </select>
       <br />
       <input
