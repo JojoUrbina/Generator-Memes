@@ -1,31 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react'
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
+import html2canvas from "html2canvas";
 
 function App() {
-const [linea1, setLinea1] = useState("linea 1");
-const [linea2, setLinea2] = useState("linea 2")
+  const [linea1, setLinea1] = useState("linea 1");
+  const [linea2, setLinea2] = useState("linea 2");
+  const [imagen, setImagen] = useState("futurama");
 
-
+  function onChangeImage(e) {
+    setImagen(e.target.value);
+  }
+  function onClickExport(e) {
+    html2canvas(document.querySelector(".meme")).then((canvas) => {
+      var img = canvas.toDataURL("image/png");
+      var link = document.createElement("a");
+      link.download = "meme.png";
+      link.href = img;
+      link.click();
+    });
+  }
   return (
     <div className="App">
-      <select >
-        <option value="Casa en llamas" >Casa en llamas</option>
-        <option value="Futurama">Futurama</option>
-        <option value="History Channel">History Channel</option>
-        <option value="Matrix">Matrix</option>
-        <option value="Philoso Raptor">Philoso Raptor</option>
-        <option value="Smart Guy">Smart Guy</option>
-       </select><br/>
-      <input type='text' placeholder='Linea 1' onChange={(e)=>setLinea1(e.target.value)}/><br/>
-      <input type='text' placeholder='Linea 2' onChange={(e)=>setLinea2(e.target.value)}/><br/>
-      <button type='submit'>Exportar</button>
-      <div>
-        <span>{linea1}</span><br/>
+      <select onChange={onChangeImage}>
+        <option value="fire">Casa en llamas</option>
+        <option value="futurama">Futurama</option>
+        <option value="history">History Channel</option>
+        <option value="matrix">Matrix</option>
+        <option value="philosoraptor">Philoso Raptor</option>
+        <option value="smart">Smart Guy</option>
+      </select>
+      <br />
+      <input
+        type="text"
+        placeholder="Linea 1"
+        onChange={(e) => setLinea1(e.target.value)}
+      />
+      <br />
+      <input
+        type="text"
+        placeholder="Linea 2"
+        onChange={(e) => setLinea2(e.target.value)}
+      />
+      <br />
+      <button type="submit" onClick={onClickExport}>
+        Exportar
+      </button>
+      <div className="meme">
+        <span>{linea1}</span>
         <span>{linea2}</span>
+        <img src={"./img/" + imagen + ".jpg"} />
       </div>
-
-
     </div>
   );
 }
