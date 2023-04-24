@@ -28,6 +28,7 @@ function App() {
         <option value="matrix">Matrix</option>
         <option value="philosoraptor">Philoso Raptor</option>
         <option value="smart">Smart Guy</option>
+        <option value="tachirita">Tachirita</option>
       </select>
       <br />
       <input
