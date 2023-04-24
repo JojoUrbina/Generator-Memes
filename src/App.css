@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 .App {
   text-align: center;
 }
@@ -37,6 +38,7 @@
   }
 }
 .meme span{
+  font-family: 'Bungee', cursive;
   margin-top: 50px;
   position: absolute;
   color: white;
