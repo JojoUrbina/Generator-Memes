@@ -32,13 +32,13 @@ function App() {
       <br />
       <input
         type="text"
-        placeholder="Linea 1"
+        placeholder="Texto 1"
         onChange={(e) => setLinea1(e.target.value)}
       />
       <br />
       <input
         type="text"
-        placeholder="Linea 2"
+        placeholder="Texto 2"
         onChange={(e) => setLinea2(e.target.value)}
       />
       <br />
