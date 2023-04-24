@@ -3,8 +3,8 @@ import { useState } from "react";
 import html2canvas from "html2canvas";
 
 function App() {
-  const [linea1, setLinea1] = useState("linea 1");
-  const [linea2, setLinea2] = useState("linea 2");
+  const [linea1, setLinea1] = useState("texto 1");
+  const [linea2, setLinea2] = useState("texto 2");
   const [imagen, setImagen] = useState("futurama");
 
   function onChangeImage(e) {
