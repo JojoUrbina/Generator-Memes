@@ -43,7 +43,7 @@ function App() {
       />
       <br />
       <button type="submit" onClick={onClickExport}>
-        Exportar
+        Guardar meme
       </button>
       <div className="meme">
         <span>{linea1}</span>
